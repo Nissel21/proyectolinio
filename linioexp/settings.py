@@ -124,3 +124,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'c2604f6446f60e'
+EMAIL_HOST_PASSWORD = '7927708c8818f7'
+EMAIL_PORT = '2525'
+
+LOGOUT_REDIRECT_URL = '/'
