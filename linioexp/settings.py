@@ -144,4 +144,4 @@ DROPBOX_OAUTH2_TOKEN = 'yrjWUiDaL8gAAAAAAAAAATRW8omlN_Twoln0zUK_zjzX4WeqcDxMqqTZ
 
 # Django Heroku
 import django_heroku
-jango_heroku.settings(locals())
+django_heroku.settings(locals())
