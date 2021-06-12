@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,15 @@ EMAIL_HOST_PASSWORD = '7927708c8818f7'
 EMAIL_PORT = '2525'
 
 LOGOUT_REDIRECT_URL = '/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# Django Storages
+
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = 'hRA72c7lnC4AAAAAAAAAARyG8pa7HAu9nelpwC2u0bAvRnoeZtpfrlyxSq-OpFns'
+
+# Django Heroku
+import django_heroku
+django_heroku.settings(locals())
